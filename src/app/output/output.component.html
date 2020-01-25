@@ -1,0 +1,60 @@
+
+<style>
+    th, td {
+  
+  padding: 8px;
+  color: white;
+}
+
+tr:nth-child(even) {background-color: rgb(121, 111, 114);}
+tr:nth-child(odd) {background-color: #373133;}
+</style>
+<div *ngIf="out.length>0">
+    <div *ngFor="let i of out" >
+      <table align="center" cellspacing="10">
+        <col width="500">
+        <col width="500">
+        <col width="500">
+        <tr>
+    <th font-color="white">Items</th>
+    <th font-color="white">Price</th>
+      </tr>
+      <tr>
+      <td align="center">{{i.first}}</td>
+    <td align="center">{{i.fp}}</td>
+    </tr>
+    <tr>
+      
+      <td align="center">{{i.second}}</td> <td align="center">{{i.sp}}</td>
+      </tr>
+      <tr><td align="center"><strong>Total</strong></td><td align="center">{{i.total}}</td></tr>
+      <!-- <tr colspan="2"><button (click)="checkout()">Checkout</button></tr> -->
+      <tr>
+      <td colspan="2" align="middle"><button
+        mat-raised-button
+        color="primary"
+        (click)="checkout()">Checkout</button></td>
+    </tr>
+      </table>
+      
+    </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <style>
+        .last
+        {
+            background-color: rgb(63, 58, 62);
+            color: white;
+        }
+    </style>
+    <div *ngIf="a" align="center" class="last">
+  <strong> <i>Total Amount: </i> </strong>{{total1}}<br><br>
+  <strong><i>Tax:  </i> </strong>{{tax}}<br><br>
+  <strong><i>Amount Payable:  </i></strong>{{amountpay}}<br><br>
+  </div>
+  <br>
+  <br>
+  

@@ -1,0 +1,38 @@
+<table cellspacing="50">
+    <col width="1280">
+  <col width="1280">
+  <col width="580">
+    <tr>
+        <td>
+<mat-card>
+    <mat-form-field>
+      <input matInput placeholder="Enter the first item" type="text" [(ngModel)]="enterfi">
+     </mat-form-field></mat-card></td>
+     <td><mat-card>
+        <mat-form-field>
+          <input matInput placeholder="Enter the price " type="text" [(ngModel)]="enterfp">
+         </mat-form-field></mat-card></td>
+    </tr>
+    <tr>
+        <td>
+     <mat-card>
+    <mat-form-field> 
+      <input matInput placeholder="Enter the second item" type="text" [(ngModel)]="entersi">
+    </mat-form-field>
+    
+    </mat-card></td>
+    <td>
+        <mat-card>
+       <mat-form-field> 
+         <input matInput placeholder="Enter the price " type="text" [(ngModel)]="entersp">
+       </mat-form-field>
+       
+       </mat-card></td>
+</tr>
+<tr>
+    <td colspan="2" align="middle"><button
+        mat-raised-button
+        color="primary"
+        (click)="onGenerate()">Generate Invoice</button></td>
+</tr>
+</table>
